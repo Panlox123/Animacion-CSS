@@ -1,0 +1,166 @@
+/* Estilos básicos */
+body {
+    background: #256a72;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: #12254d; /* Fondo oscuro para el header */
+    color: white; /* Color de texto blanco */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+nav a {
+    color: rgb(205, 192, 14);
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease; /* Prefijo para Safari */
+    -moz-transition: color 0.3s ease; /* Prefijo para Firefox */
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+nav a:hover {
+    color: #914513; /* Color al pasar el ratón */
+}
+
+/* Galería de imágenes */
+.gallery-section {
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Efecto Parallax */
+.parallax-section {
+    position: relative;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.parallax1 { background-image: url('Cloud-computing-services.png'); }
+.parallax2 { background-image: url('Cloud-computing-services-2.png'); }
+.parallax3 { background-image: url('Cloud-computing-services-3.png'); }
+
+.parallax-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.parallax-section h2 { font-size: 2em; margin-bottom: 10px; }
+.parallax-section p { font-size: 1em; line-height: 1.5; }
+
+/* Slider de imágenes */
+.slider-section {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Aumenta la altura para mejor visualización */
+    overflow: hidden;
+    display: flex; /* Añadido para centrar el contenido */
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centro el contenido del slider */
+    width: 100%;
+    height: 100%; /* Asegura que el slider ocupe toda la altura */
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* Ajusta al número de imágenes */
+    animation: slide 12s infinite; /* Ajusta la duración total de la animación */
+}
+
+.slide {
+    width: 100vw; /* Cada imagen ocupa el 100% del ancho de la pantalla */
+    flex-shrink: 0;
+    height: 100%; /* Cada imagen ocupa toda la altura del slider */
+    display: flex; /* Añadido para alinear el contenido dentro del slide */
+    align-items: center; /* Centro verticalmente */
+    justify-content: center; /* Centro horizontalmente */
+}
+
+.slide img {
+    width: auto; /* Cambiar de max-width a width para ocupar el tamaño necesario */
+    height: auto; /* Cambiar de max-height a height para mantener la proporción */
+    max-width: 80%; /* Puedes dejar esto si quieres limitar el ancho */
+    max-height: 80%; /* Puedes dejar esto si quieres limitar la altura */
+    object-fit: cover; /* Mantiene la relación de aspecto, cortando las partes no visibles */
+}
+
+
+/* Animación para el deslizamiento de imágenes */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); } /* Mantiene la primera imagen visible */
+    25% { transform: translateX(-100vw); } /* Desplaza a la segunda imagen */
+    45% { transform: translateX(-100vw); } /* Mantiene la segunda imagen visible */
+    50% { transform: translateX(-200vw); } /* Desplaza a la tercera imagen */
+    70% { transform: translateX(-200vw); } /* Mantiene la tercera imagen visible */
+    75% { transform: translateX(0); } /* Regresa a la primera imagen */
+    100% { transform: translateX(0); } /* Finaliza en la primera imagen */
+}
+
+/* Estilos básicos para el footer */
+footer {
+    background-color: #12254d; /* Fondo oscuro para el footer */
+    color: white; /* Color de texto blanco */
+    text-align: center; /* Centrar texto */
+    padding: 10px; /* Espaciado interno */
+    position: relative; /* Posicionamiento relativo */
+    bottom: 0; /* Posición en la parte inferior */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Margen superior para separar del contenido */
+}
+
